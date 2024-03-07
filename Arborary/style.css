@@ -1,7 +1,7 @@
 /* General Styles */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 body {
-    font-family: "Arial", sans-serif;
+    font-family: "Lato", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
@@ -9,22 +9,22 @@ body {
     justify-content: center;
     
   }
-  .box{
+  .box {
     height: 30px;
-    max-width: 200px;
     display: flex;
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 7px 10px; /* Removed left and right padding */
     background: #fff;
     border-radius: 30px;
     align-items: center;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    justify-self: center;
   }
-  .box:hover input{
+  
+  .box:hover input {
     width: 400px;
   }
-  .box input{
+  
+  .box input {
     width: 0;
     outline: none;
     border: none;
@@ -32,9 +32,17 @@ body {
     transition: 0.8s;
     background: transparent;
   }
-  .box a .fas{
-    color:#1daf;
+  
+  .box a .fas {
+    color: #1daf;
     font-size: 18px;
+  }
+  .center {
+    margin: auto;
+    width: 80%; /* Changed width to 100% */
+    padding: 30px;
+    display: flex;
+    justify-content: center; /* Center align the content */
   }
   /* Header Styles */
   header {
@@ -50,27 +58,20 @@ body {
     margin: 0 auto;
 
   }
-  .center {
-    margin: auto;
-    width: 0%;
-    padding: 30px;
-    display:flex;
-
-  }
   .banner h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-family: "Arial Black", sans-serif;
+    font-size: 7rem;
+    margin-bottom: 10px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
   }
-  
   .banner h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    font-family: "Arial Black", sans-serif;
+    font-family: "Lato", sans-serif;
   }
   
   .banner p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 40px;
     font-weight: 300;
     font-style: italic;
@@ -81,10 +82,10 @@ body {
 nav{
 	position: fixed;
 	margin: auto ;
-	width: fit-content;
+	width: 1920px;
 	height: 50px;
 	background: #34495e;
-	border-radius: 8px;
+	border-radius: 0px;
 	font-size: 0;
 	box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
 }
@@ -145,18 +146,22 @@ nav a:nth-child(5):hover~.animation{
 	width: 120px;
 	left: 470px;
 }
-
+nav a:nth-child(6){
+	width: 120px;
+}
+nav a:nth-child(6):hover~.animation{
+	width: 120px;
+	left: 590px;
+}
   /* Section Styles */
   section {
     padding: 100px 0;
     text-align: center;
   }
-  
   section h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
   }
-  
   /* Responsive Styles */
   @media screen and (max-width: 768px) {
     .box {
